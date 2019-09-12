@@ -94,42 +94,8 @@ spring-boot-doc的前身是[MinDoc](https://git.oschina.net/longfei6671/godoc)�
 - 项目加密，可以设置项目公开状态，私有项目需要通过Token访问。
 - 站点配置，可开启匿名访问、验证码等。
 - 不定期 push 新功能
-
-
-## 项目截图
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0909/190321_c8688308_87650.png "1.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0909/190328_79701eb8_87650.png "2.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0909/191029_b34cb360_87650.png "4.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0909/191038_962827fa_87650.png "5.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0909/191044_a1beced1_87650.png "6.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0910/113613_7facf3e2_87650.png "7.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0910/113559_f73260e8_87650.png "8.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0910/113606_78b477e3_87650.png "9.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0911/111538_ab5c7454_87650.png "10.png")
-
-![输入图片说明](https://git.oschina.net/uploads/images/2017/0923/174242_a0ff7bf1_87650.png "1234.png")
-
 ## 友情提示
 
 
 
-- spring-boot-doc作为一个新手入门级别的项目，前提必须熟知spring-boot、thymeleaf、Jpa、vuejs等相关技术，开发过程中并不能保证所有功能的正常使用。
 
-- 项目中使用到了lombok，没有安装的同学可能会报错，[lombok使用技巧](https://blog.52itstyle.com/archives/1557/) 如果不想使用，自行去掉注释，生成get set方法和构造方法。
-
-- 如果想使用MinDoc，请移步安装教程：[安利一款接口文档在线管理系统-MinDoc](https://blog.52itstyle.com/archives/1557/)
-
-
-
-
-作者： 小柒2012
-
-欢迎关注： https://blog.52itstyle.com
