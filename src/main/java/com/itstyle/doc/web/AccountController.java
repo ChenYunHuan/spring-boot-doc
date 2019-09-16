@@ -73,6 +73,7 @@ public class AccountController {
 		 String vrifyCode =  (String) request.getSession().getAttribute("vrifyCode");
 		 if(vrifyCode.equalsIgnoreCase(code)){
 			 if(user==null){
+				 member.setPassword(MD5Util.MD5(member.getPassword()));
 				 memberRepository.save(member);
 				 result.setCode(Constans.SUCCESS);
 			 }else{

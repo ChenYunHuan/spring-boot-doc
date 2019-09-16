@@ -56,6 +56,7 @@ public class MD5Util {
 		return k;
 	}
 	public static void main(String[] args) {
-		System.out.println(MD5Util.MD5("admin"));
+		System.out.println(MD5Util.MD5("123"));
+
 	}
 }
