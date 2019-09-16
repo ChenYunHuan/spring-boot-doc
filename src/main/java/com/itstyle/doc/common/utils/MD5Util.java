@@ -2,8 +2,6 @@ package com.itstyle.doc.common.utils;
 import java.security.MessageDigest;
 /**
  * MD5加密
- * 创建者 小柒2012
- * 创建时间	2017年9月7日
  */
 public class MD5Util {
 

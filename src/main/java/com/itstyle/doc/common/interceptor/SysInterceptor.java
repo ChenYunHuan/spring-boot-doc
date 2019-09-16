@@ -7,8 +7,6 @@ import com.itstyle.doc.common.constans.Constans;
 import com.itstyle.doc.model.Member;
 /**
  * 拦截器 用户权限校验
- * 创建者 小柒2012
- * 创建时间	2017年9月22日
  */
 public class SysInterceptor implements HandlerInterceptor {  
   

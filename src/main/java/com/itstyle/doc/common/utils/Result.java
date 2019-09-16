@@ -1,8 +1,6 @@
 package com.itstyle.doc.common.utils;
 /**
  * 参数封装
- * 创建者 小柒2012
- * 创建时间	2017年9月22日
  *
  */
 public class Result {

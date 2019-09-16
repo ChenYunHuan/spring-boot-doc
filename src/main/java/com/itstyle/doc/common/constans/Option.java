@@ -1,8 +1,6 @@
 package com.itstyle.doc.common.constans;
 /**
  * 选项词典
- * 创建者 小柒2012
- * 创建时间	2017年9月7日
  */
 public enum Option {
 	ENABLED_REGISTER("ENABLED_REGISTER","是否启用注册"),

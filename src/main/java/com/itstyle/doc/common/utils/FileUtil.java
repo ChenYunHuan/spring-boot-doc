@@ -293,8 +293,6 @@ public class FileUtil {
 	 * 
 	 * @param filePathAndName
 	 *            String 文件路径及名称 如c:/fqf.txt
-	 * @param fileContent
-	 *            String
 	 * @return boolean
 	 */
 	public static void delFile(String filePathAndName) {

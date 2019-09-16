@@ -5,8 +5,6 @@ import org.springframework.data.jpa.repository.Query;
 import com.itstyle.doc.model.Attachment;
 /**
  * 附件管理
- * 创建者 小柒2012
- * 创建时间	2017年9月9日
  */
 public interface AttachmentRepository extends JpaRepository<Attachment, Integer> {
 	

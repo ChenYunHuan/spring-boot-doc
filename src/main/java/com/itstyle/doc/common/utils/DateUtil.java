@@ -8,8 +8,6 @@ import java.util.Calendar;
 import java.util.Date;
 /**
  * 日期操作类
- * 创建者 小柒2012
- * 创建时间	2017年9月8日
  */
 public class DateUtil {
 	private final static SimpleDateFormat sdfYear = new SimpleDateFormat("yyyy");

@@ -8,8 +8,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 /**
  * 启动类
- * 创建者  小柒2012
- * 创建时间	2017年9月6日
  */
 @SpringBootApplication
 @ImportResource(locations={"classpath:kaptcha.xml"})  
@@ -28,7 +26,7 @@ public class Application extends WebMvcConfigurerAdapter {
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
-		SpringApplication.run(Application.class, args);
+			SpringApplication.run(Application.class, args);
 		logger.info("项目启动 ");
 	}
 }
