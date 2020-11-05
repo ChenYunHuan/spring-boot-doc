@@ -59,7 +59,8 @@ public class SettingController {
             member.setPassword(MD5Util.MD5(newPassword));
             memberRepository.save(member);
             result.setCode(Constans.SUCCESS);
-        } else {
+        }
+        else {
             result.setCode(Constans.ERROR);
             result.setMsg("原始密码错误");
         }
@@ -100,20 +101,24 @@ public class SettingController {
                         FileUtils.copyInputStreamToFile(files[0].getInputStream(), outFile);
                     }
                     result.setCode(Constans.SUCCESS);
-                } catch (Exception e) {
+                }
+                catch (Exception e) {
                     e.printStackTrace();
                     result.setCode(Constans.ERROR);
-                } finally {
+                }
+                finally {
                     try {
                         if (bw != null) {
                             bw.close();
                         }
-                    } catch (IOException e) {
+                    }
+                    catch (IOException e) {
                         e.printStackTrace();
                     }
                 }
             }
-        } catch (Exception e) {
+        }
+        catch (Exception e) {
             e.printStackTrace();
             result.setCode(Constans.ERROR);
         }
