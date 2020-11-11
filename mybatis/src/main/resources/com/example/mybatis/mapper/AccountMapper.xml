@@ -1,8 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.example.mybatis.mapper.AccountMapper">
-	<select id="selectAccount" resultType="com.example.mybatis.model.Books">
-		SELECT * from md_books where book_id = #{id}
+	<select id="selectAccount" resultType="com.example.mybatis.model.Account">
+		SELECT * from md_account where account_id = #{id}
 	</select>
 
+    <insert id="insertAccount" parameterType="com.example.mybatis.model.Account" useGeneratedKeys="true" keyProperty="accountId">
+        insert into md_account
+        (
+            account_id,
+            account_name,
+	        state,
+	        `comment`,
+	        amount,
+	        update_date,
+	        create_date,
+	        cert_id,
+	        cert_type
+	    )
+	    values
+	    (
+	        #{account.accountId},
+	        #{account.accountName},
+	        #{account.state},
+	        #{account.comment},
+	        #{account.amount},
+	        #{account.updateDate},
+	        #{account.createDate},
+	        #{account.certId},
+	        #{account.certType}
+	    )
+    </insert>
+
+    <select id="checkCertId" resultType="int">
+        select count(*) from md_account where cert_id = #{certId}
+    </select>
 </mapper>

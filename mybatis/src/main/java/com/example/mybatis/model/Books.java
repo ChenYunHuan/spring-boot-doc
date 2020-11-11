@@ -1,10 +1,13 @@
 package com.example.mybatis.model;
 
 
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 
-public class Books {
+public class Books implements Serializable {
+
+    private static final long serialVersionUID = -456773092984214841L;
 
     private Integer bookId;
 
@@ -197,4 +200,31 @@ public class Books {
     public void setVersion(Integer version) {
         this.version = version;
     }
+
+    @Override
+    public String toString() {
+        return "Books{" +
+                "bookId=" + bookId +
+                ", bookName='" + bookName + '\'' +
+                ", identify='" + identify + '\'' +
+                ", orderIndex=" + orderIndex +
+                ", description='" + description + '\'' +
+                ", label='" + label + '\'' +
+                ", privatelyOwned=" + privatelyOwned +
+                ", private_token='" + private_token + '\'' +
+                ", status=" + status +
+                ", editor='" + editor + '\'' +
+                ", docCount=" + docCount +
+                ", commentStatus='" + commentStatus + '\'' +
+                ", commentCount=" + commentCount +
+                ", cover='" + cover + '\'' +
+                ", theme='" + theme + '\'' +
+                ", createTime=" + createTime +
+                ", memberId=" + memberId +
+                ", modifyTime=" + modifyTime +
+                ", version=" + version +
+                '}';
+    }
+
+
 }
