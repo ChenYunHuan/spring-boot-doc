@@ -1,6 +1,6 @@
 package com.example.mybatis.common;
 
-public class GlobalException extends Exception {
+public class GlobalException extends RuntimeException {
 
     private static final long serialVersionUID = -6603896283492750952L;
 

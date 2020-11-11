@@ -15,6 +15,7 @@ public class GlobalExceptionHandler {
         //对于自定义异常的处理
         if (e instanceof GlobalException) {
             GlobalException ex = (GlobalException) e;
+            ex.printStackTrace();
             return Result.error(ex.getCode(), ex.getMsg());
             //对于绑定异常的处理，使用jsr303中的自定义注解抛出的异常属于绑定异常
         }
