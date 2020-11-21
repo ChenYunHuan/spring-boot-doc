@@ -16,7 +16,8 @@ public enum ResultEnum {
     SUCCESS(0, "Success"),
     ACCOUNT_ID_IS_NULL(0001, "ACCOUNT ID IS NULL"),
     CERT_ID_IS_NULL(0002, "CERT ID IS NULL"),
-    CERT_ID_IS_EXIST(0002, "CERT ID IS EXIST"),
+    CERT_ID_IS_EXIST(0003, "CERT ID IS EXIST"),
+    ACCOUNT_ID_IS_NOT_VALID(0004, "ACCOUNT_ID_IS_NOT_VALID"),
     SYSTEM_ERROR(9999, "service Interface General Exception");
 
     // 返回码

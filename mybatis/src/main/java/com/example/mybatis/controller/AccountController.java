@@ -4,7 +4,6 @@ import com.example.mybatis.common.GlobalException;
 import com.example.mybatis.common.Result;
 import com.example.mybatis.model.Account;
 import com.example.mybatis.service.AccountService;
-import org.omg.PortableInterceptor.INACTIVE;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,6 +49,21 @@ public class AccountController {
         Map<String, Integer> resultMap = new HashMap<String, Integer>();
         resultMap.put("accountId", accountId);
         logger.info("qryAccount is begin , response param id is {}", resultMap);
+        return Result.success(resultMap);
+    }
+
+    /**
+     * 根据账户id 编辑账户信息
+     * @param account
+     * @return
+     */
+    @RequestMapping(value = "editAccount", method = RequestMethod.POST)
+    public Result editAccount(@RequestBody Account account) throws GlobalException {
+        logger.info("editAccount is begin , request param is {}", account);
+        Boolean resultFlag = accountService.editAccount(account);
+        Map<String, Boolean> resultMap = new HashMap<String, Boolean>();
+        resultMap.put("resultFlag", resultFlag);
+        logger.info("editAccount is begin , response param id is {}", resultMap);
         return Result.success(resultMap);
     }
 }

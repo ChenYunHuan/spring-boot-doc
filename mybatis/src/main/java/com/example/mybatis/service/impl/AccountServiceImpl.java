@@ -23,7 +23,11 @@ public class AccountServiceImpl implements AccountService {
      */
     @Override
     public Account qryAccount(String id) {
-        return accountMapper.selectAccount(id);
+        Account account = accountMapper.selectAccount(id);
+        if (null == account) {
+            throw new GlobalException(ResultEnum.ACCOUNT_ID_IS_NOT_VALID.getResultCode(), ResultEnum.ACCOUNT_ID_IS_NOT_VALID.getResultMsg());
+        }
+        return account;
     }
 
     /**
@@ -47,5 +51,21 @@ public class AccountServiceImpl implements AccountService {
             return account.getAccountId();
         }
         return 0;
+    }
+
+    /**
+     * @desc 编辑账户
+     * @author chen.yunhuan
+     * @param account
+     * @return
+     */
+    @Override
+    public Boolean editAccount(Account account) {
+        //编辑时 account_id 不能为空
+        if (null == account || null == account.getAccountId()) {
+            throw new GlobalException(ResultEnum.ACCOUNT_ID_IS_NULL.getResultCode(), ResultEnum.ACCOUNT_ID_IS_NULL.getResultMsg());
+        }
+        accountMapper.updateAccount(account);
+        return true;
     }
 }
