@@ -35,4 +35,30 @@
     <select id="checkCertId" resultType="int">
         select count(*) from md_account where cert_id = #{certId}
     </select>
+
+    <update id="updateAccount" parameterType="com.example.mybatis.model.Account">
+        update  md_account
+        <set>
+            <if test="account.accountName != null">
+                account_name = #{account.accountName},
+            </if>
+            <if test="account.state != null">
+                state = #{account.state},
+            </if>
+            <if test="account.comment != null">
+                comment = #{account.comment},
+            </if>
+            <if test="account.amount != null">
+                amount = #{account.amount},
+            </if>
+            <if test="account.certId != null">
+                cert_id = #{account.certId},
+            </if>
+            <if test="account.certType != null">
+                cert_type = #{account.certType},
+            </if>
+            update_date = now()
+        </set>
+        where account_id = #{account.accountId}
+    </update>
 </mapper>
