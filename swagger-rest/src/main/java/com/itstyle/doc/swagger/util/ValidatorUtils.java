@@ -6,8 +6,6 @@
 package com.itstyle.doc.swagger.util;
 
 
-import org.springframework.web.bind.annotation.ExceptionHandler;
-
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
