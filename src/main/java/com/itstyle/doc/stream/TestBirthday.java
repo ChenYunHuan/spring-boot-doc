@@ -3,10 +3,10 @@ package com.itstyle.doc.stream;
 import java.text.SimpleDateFormat;
 
 public class TestBirthday {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws NoSuchFieldException, IllegalAccessException {
+        int i = Integer.parseInt("1001", 2);
 
-        System.out.println(checkBirthDay("2020-17-10"));
-
+        System.out.println(i);
     }
 
 

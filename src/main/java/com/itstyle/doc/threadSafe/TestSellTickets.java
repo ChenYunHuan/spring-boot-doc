@@ -1,7 +1,7 @@
-package com.itstyle.doc.stream.threadSafe;
+package com.itstyle.doc.threadSafe;
 
-import com.itstyle.doc.stream.threadSafe.interfacepackage.ParentTickets;
-import com.itstyle.doc.stream.threadSafe.interfacepackage.SellTicket;
+import com.itstyle.doc.threadSafe.interfacepackage.ParentTickets;
+import com.itstyle.doc.threadSafe.interfacepackage.SellTicket;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,5 +14,7 @@ public class TestSellTickets {
         for (int i = 0; i < 100; i++) {
             executorService.execute(tickets);
         }
+
+        String sql = "SERV_TYPE";
     }
 }

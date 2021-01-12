@@ -1,4 +1,4 @@
-package com.itstyle.doc.stream.threadSafe;
+package com.itstyle.doc.threadSafe;
 
 import org.junit.jupiter.api.Test;
 

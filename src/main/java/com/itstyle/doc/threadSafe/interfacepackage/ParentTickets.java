@@ -1,4 +1,4 @@
-package com.itstyle.doc.stream.threadSafe.interfacepackage;
+package com.itstyle.doc.threadSafe.interfacepackage;
 
 /**
  *
