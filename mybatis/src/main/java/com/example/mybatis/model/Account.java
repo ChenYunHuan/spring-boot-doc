@@ -3,6 +3,7 @@ package com.example.mybatis.model;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @desc 账户实体类
