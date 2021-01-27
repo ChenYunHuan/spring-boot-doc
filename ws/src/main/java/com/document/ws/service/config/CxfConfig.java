@@ -1,6 +1,7 @@
 package com.document.ws.service.config;
 
 import com.document.ws.service.CommonService;
+import com.document.ws.service.MyService;
 import org.apache.cxf.Bus;
 import org.apache.cxf.jaxws.EndpointImpl;
 
@@ -20,11 +21,21 @@ public class CxfConfig {
     @Autowired
     CommonService commonService;
 
+    @Autowired
+    MyService myService;
+
     /** JAX-WS **/
     @Bean
     public Endpoint endpoint() {
         EndpointImpl endpoint = new EndpointImpl(bus, commonService);
         endpoint.publish("/CommonService");
+        return endpoint;
+    }
+
+    @Bean
+    public Endpoint endpoint1() {
+        EndpointImpl endpoint = new EndpointImpl(bus, myService);
+        endpoint.publish("/myService");
         return endpoint;
     }
 }
